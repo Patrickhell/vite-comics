@@ -7,7 +7,7 @@
             <ul>
                 <li v-for ="option in optionsList">
 
-                    <img :src="getImagePath ('option.image')" alt="image-DC">
+                    <img :src="getImagePath (option.image)" alt="image-DC">
                     <p>
                         {{ option.text }}
                     </p>
@@ -53,7 +53,7 @@
     },
   methods: {
         getImagePath: function(img) {
-            return new URL(`../assets/${img}`, import.meta.url).href;
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
         
       }
   
@@ -79,8 +79,23 @@
     left: 22%;
     transform: translate(-50%, -50%);
   }
+  ul{
+    justify-content: center;
+   
+  }
   
   li{
     color: white;
+   display: flex;
+   flex-direction: row;
+   font-size: 10px;
+   align-items:center;
+   margin-right:20px;
+   padding:1.5rem;
+   
+  }
+
+  img{
+    width: 35px;
   }
   </style>
