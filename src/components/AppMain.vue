@@ -5,12 +5,12 @@
         </div>
         <div id="mainDown">
             <ul>
-                <li v-for ="option in optionsList">
+                <li v-for="option in optionsList">
 
-                    <img :src="getImagePath (option.image)" alt="image-DC">
-                    <p>
-                        {{ option.text }}
-                    </p>
+                  <img :src="getImagePath(option.image)" alt="image-DC">
+                  <p>
+                    {{ option.text }}
+                  </p>
 
                 </li>
             </ul>
@@ -70,6 +70,8 @@
   #mainDown{
     height: 100px;
     background-color:#0282f9;
+  
+    
   }
 
   h3{
@@ -81,6 +83,8 @@
   }
   ul{
     justify-content: center;
+    display: flex;
+    flex-direction: row;
    
   }
   
@@ -90,12 +94,13 @@
    flex-direction: row;
    font-size: 10px;
    align-items:center;
-   margin-right:20px;
+   margin-right:15px;
    padding:1.5rem;
    
   }
 
   img{
     width: 35px;
+    margin-right: .5rem;
   }
   </style>

@@ -108,6 +108,14 @@ img.image{
     width: 90px;
     padding: 1rem;
 }
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
 li a {
     text-decoration: none;
     color: black;
@@ -118,8 +126,6 @@ li a {
     &:hover {
         color: #0282f9;
     }
-
-
 }
 
 hr {
