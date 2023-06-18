@@ -1,15 +1,14 @@
 <template>
    <main>
-        <div id="mainUpper">
-         <h3> --- Content goes here --- </h3> 
-        </div>
+  
+    <ComicsCards />
         <div id="mainDown">
             <ul>
                 <li v-for="option in optionsList">
 
                   <img :src="getImagePath(option.image)" alt="image-DC">
                   <p>
-                    {{ option.text }}
+                    {{option.text }}
                   </p>
 
                 </li>
@@ -21,8 +20,12 @@
   
   
   <script>
+
+  import ComicsCards from './ComicsCards.vue';
+
   export default {
   name : 'AppMain',
+  
   data(){
       return{
         optionsList: [
@@ -51,6 +54,11 @@
       };
       
     },
+
+    components: {
+      ComicsCards,
+    },
+   
   methods: {
         getImagePath: function(img) {
             return new URL(`../assets/img/${img}`, import.meta.url).href;
@@ -58,20 +66,17 @@
       }
   
   }
+  
 };
   </script>
   
   <style lang="scss" scoped>
-   #mainUpper {
-    height: 90px;
-    background-color:black;
-    position: relative;
-  }
+
+  
   #mainDown{
     height: 100px;
     background-color:#0282f9;
-  
-    
+   
   }
 
   h3{
@@ -96,6 +101,7 @@
    align-items:center;
    margin-right:15px;
    padding:1.5rem;
+  
    
   }
 
@@ -103,4 +109,6 @@
     width: 35px;
     margin-right: .5rem;
   }
+
+  
   </style>

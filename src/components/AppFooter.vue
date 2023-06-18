@@ -15,7 +15,7 @@
               <p class="title-text title">
                    SHOP
               </p>
-              <li v-for=" shopElement in shopList">
+              <li v-for="shopElement in shopList">
                 <p>
                  {{shopElement }}
                 </p>
@@ -52,7 +52,7 @@
     <div class="flex-column">
       <div class="middleFooter">
         <div>
-          <button>
+          <button >
             SIGN-UP NOW!
           </button>
         </div>
@@ -143,10 +143,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1;
+    
   }
 
   .flex-column{
@@ -154,10 +151,9 @@
     flex-direction: column;
   }
   div.downFooter{
-    height: 185px;
+    height: 100px;
     background-color: black;
-    
-    
+  
   }
 
   img{
@@ -182,7 +178,7 @@
     flex-direction: column;
     font-size: 11px;
     text-align: left;
-    line-height: 1rem;
+    line-height: .8rem;
     
   }
   ul p.title{

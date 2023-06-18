@@ -4,22 +4,23 @@
         <div class="imgLogo" >
             <img class="image" src="../assets/img/dc-logo.png" alt="logo-DC">
         </div>
-       
         <ul>
             <li v-for="link in linkList" :class ="link.active ?'active' : '' ">
                 <a href="link.linkList">
                    {{ link.text }}
                 </a>
                 <hr>
-                
-                
             </li>
-           
-           
-           
         </ul>
-        
     </div>
+    <div class="jumbotron">
+        <div class="currentSeriesButton">
+          <button>
+            CURRENT SERIES
+          </button>
+        </div>
+    </div>
+    
     
 
   </header>
@@ -92,10 +93,17 @@ data(){
 </script >
 
 <style lang="scss" scoped>
-header{
+header div.narbar{
     height: 90px;
     position: relative;
     
+}
+header div.jumbotron{
+    height: 330px;
+    background-image: url('../assets/img/jumbotron.jpg');
+    background-repeat: no-repeat;
+    object-fit: contain;
+    position:relative;
 }
 div.navBar{
     display: flex;
@@ -142,5 +150,19 @@ hr {
     bottom: 0;
     right: 557px;
 }
+div.currentSerieButton{
 
+}
+button{
+    height: 45px;
+    width: 200px;
+    background-color: #0282f9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    position:absolute;
+    left: 150px;
+    bottom: -20px;
+    
+}
 </style>
